@@ -1,0 +1,9 @@
+"Connections: -" = "トンネル: 切";
+"Turn on tunnel" = "トンネルを入にする";
+"Turn off tunnel" = "トンネルを切にする";
+"Connections: Bind Error" = "バインドエラー";
+"Connections: %@" = "接続数: %@";
+"Connections: 0" = "接続数: 0";
+"Hook failure." = "フックできませんでした。";
+"Any Device" = "いずれかのデバイス";
+"To change target device, Tunnel must be restarted." = "接続先を変更するにはトンネルを再起動する必要があります。";

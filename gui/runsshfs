@@ -1,0 +1,14 @@
+#!/bin/sh
+
+$@
+
+ret=$?
+#echo ${ret}
+
+if test ${ret} -eq 0
+then
+	echo "success"
+	exit;exit
+else
+	echo "failure"
+fi

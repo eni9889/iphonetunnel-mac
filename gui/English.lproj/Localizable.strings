@@ -1,0 +1,13 @@
+"Connections: -" = "Tunnel: Off";
+
+"Turn on tunnel" = "Turn Tunnel On";
+"Turn off tunnel" = "Turn Tunnel Off";
+
+"Connections: Bind Error" = "Connections: Bind Error";
+"Connections: %@" = "Connections: %@";
+"Connections: 0" = "Connections: 0";
+
+"Hook failure." = "Hook failure.";
+
+"Any Device" = "Any Device";
+"To change target device, Tunnel must be restarted." = "To change the target device, Tunnel must be restarted.";
