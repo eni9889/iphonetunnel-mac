@@ -3,8 +3,7 @@
 //  iPhoneTunnel
 //
 //  Created by ito on 平成 20/09/22.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
-//
+//	Updated by phonique@gmail.com on 12/12/2009
 
 #import "Controller.h"
 #import "ITStatusBarView.h"
@@ -186,8 +185,9 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 	//	sleep(1);
 	//}
 }
-
-
+//phonique - python integration - disable device update, because of crash when iPhone is connected
+//disabled "Target Device" in Interface Builder
+/*
 - (void)deviceConnected:(const char*)ids
 {
 	NSString* idObj = [NSString stringWithCString:ids encoding:NSUTF8StringEncoding];
@@ -204,6 +204,7 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 	[self refreshDeviceMenuItem];
 	
 }
+ */
 
 - (void)deviceDisconnected:(const char*)ids
 {
@@ -373,17 +374,30 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 
 - (void)runInTerminal:(id)sender
 {
+	/*
 	NSString* tunnelExec = [[NSBundle mainBundle] pathForResource:@"itnl" ofType:nil];
-	
 	NSString* scriptBase = @"tell application \"Terminal\"\n\
 	do script (\"cd \\\"%@\\\"\\nsh iphone_tunnel %@ %@ %@\")\n\
 	end tell";
+	
+	 NSString* script;
+	 if (_currentDevice) {
+	 script = [NSString stringWithFormat:scriptBase, [tunnelExec stringByDeletingLastPathComponent], [_devicePort stringValue], [_localPort stringValue], _currentDevice];
+	 } else {
+	 script = [NSString stringWithFormat:scriptBase, [tunnelExec stringByDeletingLastPathComponent], [_devicePort stringValue], [_localPort stringValue], @""];
+	 }
+	*/
+	
+	//phonique python mod
+	NSString* tunnelExec = [[NSBundle mainBundle] pathForResource:@"tcprelay.py" ofType:nil];
+	NSString* scriptBase = @"tell application \"Terminal\"\n\
+	do script (\"cd \\\"%@\\\"\\npython tcprelay.py -t %@:%@ &\")\n\
+	end tell";
+	
 	NSString* script;
-	if (_currentDevice) {
-		script = [NSString stringWithFormat:scriptBase, [tunnelExec stringByDeletingLastPathComponent], [_devicePort stringValue], [_localPort stringValue], _currentDevice];
-	} else {
-		script = [NSString stringWithFormat:scriptBase, [tunnelExec stringByDeletingLastPathComponent], [_devicePort stringValue], [_localPort stringValue], @""];
-	}
+	//no _currentDevice with python implementation (yet)
+	script = [NSString stringWithFormat:scriptBase, [tunnelExec stringByDeletingLastPathComponent], [_devicePort stringValue], [_localPort stringValue], @""];
+
 
 	//NSLog(@"runscript %@", script);
 	
@@ -404,7 +418,10 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 
 - (void)kill
 {
-	TaskWrapper* killall = [[TaskWrapper alloc] initWithController:nil arguments:[NSArray arrayWithObjects:@"/usr/bin/killall", @"-INT", @"itnl", nil]];
+	
+	//TaskWrapper* killall = [[TaskWrapper alloc] initWithController:nil arguments:[NSArray arrayWithObjects:@"/usr/bin/killall", @"-INT", @"itnl", nil]];
+	//phonique python mod
+	TaskWrapper* killall = [[TaskWrapper alloc] initWithController:nil arguments:[NSArray arrayWithObjects:@"/usr/bin/killall", @"-INT", @"tcprelay.py", nil]];
 	[killall startProcessWaitUntilExit:YES];
 	[killall release];
 }
@@ -499,6 +516,7 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 	[self mountToFinderAs:@"root" volumeName:[_volNameRoot stringValue]];
 }
 
+
 - (void)mountToFinderAs:(NSString*)user volumeName:(NSString*)vol
 {
 	if ([user length] == 0 || [vol length] == 0) {
@@ -561,12 +579,12 @@ void mobileDeviceNotification(struct am_device_notification_callback_info* info)
 	[[NSWorkspace sharedWorkspace] openURL:sshURL];
 }
 
-- (IBAction)toolThethering:(id)sender
+- (IBAction)toolTethering:(id)sender
 {
 	NSString* scriptBase = @"tell application \"Terminal\"\n\
 	do script (\"ssh -ND %d -p %d mobile@127.0.0.1\")\n\
 	end tell";
-	NSString* script = [NSString stringWithFormat:scriptBase, [_thetheringPort intValue], [_localPort intValue]];
+	NSString* script = [NSString stringWithFormat:scriptBase, [_tetheringPort intValue], [_localPort intValue]];
 	
 	NSAppleScript* appleScript = [[NSAppleScript alloc] initWithSource:script];
 	[appleScript executeAndReturnError:nil];

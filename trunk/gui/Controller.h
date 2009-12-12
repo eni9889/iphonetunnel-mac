@@ -23,7 +23,7 @@
 	
 	IBOutlet NSWindow*	_prefWindow;
 	IBOutlet NSTextField* _localPort;
-	IBOutlet NSTextField* _thetheringPort;
+	IBOutlet NSTextField* _tetheringPort;
 	IBOutlet NSTextField* _devicePort;
 	
 	IBOutlet NSTextField* _sshOptionUser;
@@ -60,5 +60,5 @@
 - (IBAction)toolMountAsRoot:(id)sender;
 - (IBAction)toolSFTP:(id)sender;
 - (IBAction)toolSFTPAsRoot:(id)sender;
-- (IBAction)toolThethering:(id)sender;
+- (IBAction)toolTethering:(id)sender;
 @end

@@ -3,25 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12F2177410D333F300BA5481 /* tcprelay.py in Resources */ = {isa = PBXBuildFile; fileRef = 12F2177210D333F300BA5481 /* tcprelay.py */; };
+		12F2177510D333F300BA5481 /* usbmux.py in Resources */ = {isa = PBXBuildFile; fileRef = 12F2177310D333F300BA5481 /* usbmux.py */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		5221ED1E0F540E57007FE5F1 /* itnl in Resources */ = {isa = PBXBuildFile; fileRef = 5221ED1D0F540E57007FE5F1 /* itnl */; };
 		5221ED4F0F540FDC007FE5F1 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5221ED4E0F540FDC007FE5F1 /* Sparkle.framework */; };
 		5221ED650F541003007FE5F1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5221ED4E0F540FDC007FE5F1 /* Sparkle.framework */; };
 		522C5A140E88D6BC001ED2FB /* right_arrow-.png in Resources */ = {isa = PBXBuildFile; fileRef = 522C5A130E88D6BC001ED2FB /* right_arrow-.png */; };
 		522C5A780E88EFC0001ED2FB /* tunnel-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 522C5A770E88EFC0001ED2FB /* tunnel-icon.icns */; };
 		523A40FF0F2352F500DFB54F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5225E6DD0E8BD0A300222A83 /* Credits.rtf */; };
 		523A41220F23554600DFB54F /* sshfs-static-leopard in Resources */ = {isa = PBXBuildFile; fileRef = 523A41210F23554600DFB54F /* sshfs-static-leopard */; };
-		523A41240F23556400DFB54F /* sshfs-static-tiger in Resources */ = {isa = PBXBuildFile; fileRef = 523A41230F23556400DFB54F /* sshfs-static-tiger */; };
 		526732560F1E2B5000D1825D /* MobileDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526732550F1E2B5000D1825D /* MobileDevice.framework */; };
 		5271D4AC0E8A985300B1FB90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5271D4AB0E8A985300B1FB90 /* Localizable.strings */; };
 		5272C5330E8763FC00DAA351 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5272C5320E8763FC00DAA351 /* Controller.m */; };
 		5272C6A90E877E8F00DAA351 /* ITStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5272C6A80E877E8F00DAA351 /* ITStatusBarView.m */; };
 		5277146F0E8A6C2800B90458 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5277146E0E8A6C2800B90458 /* defaults.plist */; };
-		52C363B70F1F5C5700338923 /* iphone_tunnel in Resources */ = {isa = PBXBuildFile; fileRef = 52C363B60F1F5C5700338923 /* iphone_tunnel */; };
 		52C364560F1F6F3500338923 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 52C364550F1F6F3500338923 /* dsa_pub.pem */; };
 		52D0E22E0E87B1A600F29EDE /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D0E22D0E87B1A600F29EDE /* right_arrow.png */; };
 		52D0E2300E87B21600F29EDE /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D0E22F0E87B21600F29EDE /* left_arrow.png */; };
@@ -31,7 +30,6 @@
 		52D0E2450E87B84B00F29EDE /* right_arrow_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D0E2410E87B84B00F29EDE /* right_arrow_alt.png */; };
 		52D0E26E0E87C4D900F29EDE /* arrow_mask.tif in Resources */ = {isa = PBXBuildFile; fileRef = 52D0E26D0E87C4D900F29EDE /* arrow_mask.tif */; };
 		52E966330E8A7F0200855471 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E966320E8A7F0200855471 /* TaskWrapper.m */; };
-		52E966440E8A81C100855471 /* md_hook.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 52E966340E8A7F2E00855471 /* md_hook.dylib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -53,6 +51,8 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		12F2177210D333F300BA5481 /* tcprelay.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = tcprelay.py; sourceTree = "<group>"; };
+		12F2177310D333F300BA5481 /* usbmux.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = usbmux.py; sourceTree = "<group>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,7 +65,6 @@
 		522C5A130E88D6BC001ED2FB /* right_arrow-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow-.png"; sourceTree = "<group>"; };
 		522C5A770E88EFC0001ED2FB /* tunnel-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "tunnel-icon.icns"; sourceTree = "<group>"; };
 		523A41210F23554600DFB54F /* sshfs-static-leopard */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sshfs-static-leopard"; sourceTree = "<group>"; };
-		523A41230F23556400DFB54F /* sshfs-static-tiger */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sshfs-static-tiger"; sourceTree = "<group>"; };
 		526732500F1E2ABB00D1825D /* MobileDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileDevice.h; sourceTree = "<group>"; };
 		526732550F1E2B5000D1825D /* MobileDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileDevice.framework; path = /System/Library/PrivateFrameworks/MobileDevice.framework; sourceTree = "<absolute>"; };
 		5271D4A70E8A980300B1FB90 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -166,6 +165,8 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* iPhoneTunnel_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				12F2177210D333F300BA5481 /* tcprelay.py */,
+				12F2177310D333F300BA5481 /* usbmux.py */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				5221ED1D0F540E57007FE5F1 /* itnl */,
-				523A41230F23556400DFB54F /* sshfs-static-tiger */,
 				523A41210F23554600DFB54F /* sshfs-static-leopard */,
 				52C364550F1F6F3500338923 /* dsa_pub.pem */,
 				5225E6DD0E8BD0A300222A83 /* Credits.rtf */,
@@ -235,7 +235,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneTunnel" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* iPhoneTunnel */;
 			projectDirPath = "";
@@ -251,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E966440E8A81C100855471 /* md_hook.dylib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				52D0E22E0E87B1A600F29EDE /* right_arrow.png in Resources */,
@@ -266,11 +265,10 @@
 				5277146F0E8A6C2800B90458 /* defaults.plist in Resources */,
 				5271D4AC0E8A985300B1FB90 /* Localizable.strings in Resources */,
 				523A40FF0F2352F500DFB54F /* Credits.rtf in Resources */,
-				52C363B70F1F5C5700338923 /* iphone_tunnel in Resources */,
 				52C364560F1F6F3500338923 /* dsa_pub.pem in Resources */,
 				523A41220F23554600DFB54F /* sshfs-static-leopard in Resources */,
-				523A41240F23556400DFB54F /* sshfs-static-tiger in Resources */,
-				5221ED1E0F540E57007FE5F1 /* itnl in Resources */,
+				12F2177410D333F300BA5481 /* tcprelay.py in Resources */,
+				12F2177510D333F300BA5481 /* usbmux.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,13 +385,13 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};

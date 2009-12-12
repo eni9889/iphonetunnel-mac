@@ -7,10 +7,10 @@
 	<key>volNameMobile</key>
 	<string>myiPhoneMobile</string>
 	<key>localPort</key>
-	<integer>9876</integer>
+	<integer>2222</integer>
 	<key>devicePort</key>
 	<integer>22</integer>
-	<key>thetheringPort</key>
+	<key>tetheringPort</key>
 	<integer>9999</integer>
 </dict>
 </plist>
