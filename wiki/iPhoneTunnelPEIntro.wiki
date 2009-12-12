@@ -1,5 +1,5 @@
 #labels Phase-Deploy,Phase-Implementation
-Copy of the front page.
+Copy of the front page.<br/>
 <b>iPhone Tunnel 2.3 <i>PE</i> (Python Edition) ALPHA release!</b>
 
 <i>Instructions:</i><br/>
